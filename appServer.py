@@ -2,7 +2,6 @@ from twisted.internet import reactor
 from twisted.internet.task import deferLater
 from twisted.web.resource import Resource
 from twisted.web.server import Site,NOT_DONE_YET
-import time
 
 class BusyPage(Resource):
 	isLeaf = True 
