@@ -13,11 +13,12 @@ class Page(Resource):
 		return NOT_DONE_YET
 '''
 from twisted_protocols.GpsPage import gpsPage
-
+from twisted_protocols.UserPage
 mainPage = Reource()
 apiPage = Resource()
 mainPage.putChild('api',apiPage)
 apiPage.putChild('gps',gpsPage)
+apiPage.putChild('user',userPage)
 factory = Site(mainPage) 
 reactor.listenTCP(8000,factory)
 reactor.run()
